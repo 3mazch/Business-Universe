@@ -38,7 +38,7 @@ Chi tiết từng bảng/cột: xem `data_dictionary.md`.
 ## Vài quyết định thiết kế đáng chú ý
 
 - **`dim_store` không có cột phân loại Flagship/Standard/Kiosk.** Quy mô, doanh thu, nhân sự của mỗi store là *kết quả suy ra* từ tổ hợp `city × location_tier × size_m2` (xem Store Profile Logic), không gán nhãn cứng trước — để phản ánh đúng cách một chuỗi F&B thật vận hành.
-- **Ledger tồn kho dual-grain.** `fact_inventory_transaction` dùng chung 1 cấu trúc ledger cho 2 nhánh khác nhau: đồ uống pha chế theo BOM (`ingredient_id`) và Food/Retail/Merchandise nhập nguyên SKU (`variant_id`) — CHECK constraint đảm bảo mỗi dòng chỉ dùng đúng 1 cơ chế.
+- **Ledger tồn kho dual-grain.** `fact_inventory` dùng chung 1 cấu trúc ledger cho 2 nhánh khác nhau: đồ uống pha chế theo BOM (`ingredient_id`) và Food/Retail/Merchandise nhập nguyên SKU (`variant_id`) — CHECK constraint đảm bảo mỗi dòng chỉ dùng đúng 1 cơ chế.
 - **Slowly-changing theo nhu cầu thực tế**, không SCD hóa toàn bộ: `store_lease` tách khỏi `dim_store` vì rent đổi theo chu kỳ tái ký; `dim_product_variant` có `effective_from/to` vì giá bán đổi theo thời gian; `fact_customer_membership_history` lưu lịch sử đổi hạng thay vì ghi đè.
 - **Bảng derived là bảng vật lý, không phải view.** `fact_store_pnl_monthly` và `fact_kpi_daily_store` được tính từ các fact khác nhưng lưu riêng — mô phỏng đúng 1 pipeline ETL/batch job thực tế thay vì tính lại mỗi lần truy vấn.
 

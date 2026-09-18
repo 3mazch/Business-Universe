@@ -1,6 +1,6 @@
 # Flex Coffee & Tea — Data Dictionary
 
-> Sinh trực tiếp từ `create_schema.sql` (SQL Server / T-SQL, v1.3) — 39 bảng trên 9 domain.
+> Sinh trực tiếp từ `create_schema.sql` (SQL Server / T-SQL, v1.4 (Logical/Composite Keys Edition)) — 39 bảng trên 9 domain.
 > Mục đích: tra cứu chính xác từng cột (kiểu dữ liệu, bắt buộc/nullable, khóa/tham chiếu, giá trị hợp lệ) khi viết query, ETL, hoặc data generation engine.
 > Về ý nghĩa nghiệp vụ/rule đằng sau các bảng, xem `../business/Business_Requirements_Specification_(BRS).md` và `../business/Entity_List.md`.
 
@@ -14,7 +14,7 @@
 | `Ràng buộc bảng` | CHECK/UNIQUE áp dụng trên tổ hợp nhiều cột (không gắn vào 1 cột đơn lẻ) |
 | `Index` | Index phụ trợ (ngoài PK) đã khai báo trong DDL |
 
-Quy ước ID: hầu hết bảng dùng `IDENTITY(1,1)` (auto-increment). Riêng `dim_product`, `dim_product_variant` dùng `VARCHAR(20)` theo convention prefix (VD: `BVR-001`, `BVR-001-M`, `FOOD-001`); `dim_product_category`, `dim_membership_tier` dùng mã ngắn (`CAT-01`, `TIER-1`).
+Quy ước ID: Sử dụng Composite Keys và Logical Strings cho Fact tables, không dùng IDENTITY.. Riêng `dim_product`, `dim_product_variant` dùng `VARCHAR(20)` theo convention prefix (VD: `BVR-001`, `BVR-001-M`, `FOOD-001`); `dim_product_category`, `dim_membership_tier` dùng mã ngắn (`CAT-01`, `TIER-1`).
 
 ---
 
@@ -219,7 +219,7 @@ Lịch sử thay đổi hạng thành viên theo thời gian (nâng hạng / h�
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `membership_history_id` | BIGINT | NOT NULL | PK |  |  |
+| `history_id` | VARCHAR(50) | NOT NULL | PK |  |  |
 | `customer_id` | INT | NOT NULL | FK → `dim_customer.customer_id` |  |  |
 | `effective_date` | DATE | NOT NULL |  |  |  |
 | `old_tier_id` | VARCHAR(10) | NULL | FK → `dim_membership_tier.tier_id` |  |  |
@@ -249,7 +249,7 @@ Mọi lần cộng điểm (gắn với order) hoặc trừ điểm (gắn với
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `point_txn_id` | BIGINT | NOT NULL | PK |  |  |
+| `point_txn_id` | VARCHAR(50) | NOT NULL | PK |  |  |
 | `customer_id` | INT | NOT NULL | FK → `dim_customer.customer_id` |  |  |
 | `txn_datetime` | DATETIME2 | NOT NULL |  |  |  |
 | `txn_type` | VARCHAR(20) | NOT NULL |  |  | giá trị hợp lệ: `earn`, `redeem` |
@@ -267,7 +267,7 @@ Giao dịch khách hàng đổi điểm lấy quà — sự kiện độc lập 
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `redemption_id` | BIGINT | NOT NULL | PK |  |  |
+| `redemption_id` | VARCHAR(50) | NOT NULL | PK |  |  |
 | `customer_id` | INT | NOT NULL | FK → `dim_customer.customer_id` |  |  |
 | `reward_id` | INT | NOT NULL | FK → `dim_reward_catalog.reward_id` |  |  |
 | `redemption_datetime` | DATETIME2 | NOT NULL |  |  |  |
@@ -304,7 +304,7 @@ Bảng header đơn hàng — trung tâm của domain Sales, liên kết store/c
 | `date_key` | INT | NULL | FK → `dim_date.date_key` |  |  |
 | `order_datetime` | DATETIME2 | NOT NULL |  |  |  |
 | `order_type` | VARCHAR(20) | NOT NULL |  |  | giá trị hợp lệ: `dine_in`, `takeaway`, `delivery` |
-| `order_status` | VARCHAR(20) | NOT NULL |  | `'completed'` | giá trị hợp lệ: `completed`, `canceled`, `refunded` |
+| `order_status` | VARCHAR(20) | NOT NULL |  | `'completed'` | giá trị hợp lệ: `completed`, `failed`, `canceled`, `refunded` |
 | `gross_amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `discount_amount_vnd` | DECIMAL(18,0) | NOT NULL |  | `0` |  |
 | `net_amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
@@ -319,8 +319,8 @@ Chi tiết từng dòng sản phẩm trong đơn hàng.
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `order_item_id` | BIGINT | NOT NULL | PK |  |  |
-| `order_id` | BIGINT | NOT NULL | FK → `fact_order.order_id` |  |  |
+| `order_id` | BIGINT | NOT NULL | PK, FK → `fact_order.order_id` |  |  |
+| `item_seq` | INT | NOT NULL | PK |  |  |
 | `variant_id` | VARCHAR(20) | NOT NULL | FK → `dim_product_variant.variant_id` |  |  |
 | `quantity` | INT | NOT NULL |  |  |  |
 | `unit_price_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
@@ -336,9 +336,11 @@ Modifier (topping/đường/đá) áp dụng cho từng dòng sản phẩm trong
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `order_item_modifier_id` | BIGINT | NOT NULL | PK |  |  |
-| `order_item_id` | BIGINT | NOT NULL | FK → `fact_order_item.order_item_id` |  |  |
-| `modifier_id` | INT | NOT NULL | FK → `dim_modifier.modifier_id` |  |  |
+| `order_id` | BIGINT | NOT NULL | PK, FK → `fact_order_item` |  |  |
+| `item_seq` | INT | NOT NULL | PK, FK → `fact_order_item` |  |  |
+| `modifier_id` | INT | NOT NULL | PK, FK → `dim_modifier.modifier_id` |  |  |
+| `modifier_name` | NVARCHAR(100) | NULL |  |  |  |
+| `modifier_group` | VARCHAR(30) | NULL |  |  |  |
 | `extra_price_vnd` | DECIMAL(18,0) | NOT NULL |  | `0` |  |
 
 > **Index**: `(order_item_id)`
@@ -351,12 +353,12 @@ Thông tin thanh toán của đơn hàng — có thể nhiều dòng nếu chia 
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `payment_id` | BIGINT | NOT NULL | PK |  |  |
-| `order_id` | BIGINT | NOT NULL | FK → `fact_order.order_id` |  |  |
-| `payment_method` | VARCHAR(20) | NOT NULL |  |  | giá trị hợp lệ: `cash`, `card`, `ewallet`, `qr` |
-| `amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
+| `order_id` | BIGINT | NOT NULL | PK, FK → `fact_order.order_id` |  |  |
+| `payment_method` | VARCHAR(20) | NOT NULL | PK |  | giá trị hợp lệ: `cash`, `card`, `ewallet`, `qr` |
+| `payment_status` | VARCHAR(20) | NOT NULL |  | `'completed'` | giá trị hợp lệ: `completed`, `failed`, `pending` |
+| `payment_amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
+| `payment_surcharge_vnd` | DECIMAL(18,0) | NOT NULL |  | `0` |  |
 | `payment_datetime` | DATETIME2 | NULL |  |  | nullable (pending/async payments) |
-| `payment_status` | VARCHAR(20) | NOT NULL |  | `'success'` | giá trị hợp lệ: `success`, `failed`, `pending` |
 
 > **Index**: `(order_id)`
 
@@ -368,11 +370,10 @@ Chi tiết giảm giá áp dụng cho đơn hàng, liên kết campaign nếu c�
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `order_discount_id` | BIGINT | NOT NULL | PK |  |  |
-| `order_id` | BIGINT | NOT NULL | FK → `fact_order.order_id` |  |  |
-| `campaign_id` | INT | NULL | FK → `dim_campaign.campaign_id` |  |  |
+| `order_id` | BIGINT | NOT NULL | PK, FK → `fact_order.order_id` |  |  |
+| `campaign_id` | INT | NOT NULL | PK, FK → `dim_campaign.campaign_id` |  |  |
 | `discount_amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
-| `discount_reason` | NVARCHAR(200) | NULL |  |  |  |
+| `campaign_type` | VARCHAR(30) | NULL |  |  |  |
 
 > **Index**: `(order_id)`
 
@@ -465,14 +466,16 @@ Nhà cung cấp nguyên liệu (central/local) hoặc nhà cung cấp hàng outs
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `purchase_order_id` | BIGINT | NOT NULL | PK |  |  |
-| `store_id` | INT | NULL | FK → `dim_store.store_id` |  |  |
+| `po_id` | VARCHAR(50) | NOT NULL | PK |  |  |
+| `po_type` | VARCHAR(30) | NULL |  |  |  |
 | `warehouse_id` | INT | NULL | FK → `dim_warehouse.warehouse_id` |  |  |
+| `store_id` | INT | NULL | FK → `dim_store.store_id` |  |  |
 | `supplier_id` | INT | NOT NULL | FK → `dim_supplier.supplier_id` |  |  |
-| `order_date` | DATE | NOT NULL |  |  |  |
-| `expected_delivery_date` | DATE | NULL |  |  |  |
-| `actual_delivery_date` | DATE | NULL |  |  |  |
-| `status` | VARCHAR(20) | NOT NULL |  | `'ordered'` | giá trị hợp lệ: `ordered`, `delivered`, `canceled` |
+| `order_date` | INT | NOT NULL | FK → `dim_date.date_key` |  |  |
+| `expected_delivery_date` | INT | NULL | FK → `dim_date.date_key` |  |  |
+| `actual_delivery_date` | INT | NULL | FK → `dim_date.date_key` |  |  |
+| `po_status` | VARCHAR(20) | NOT NULL |  | `'ordered'` | giá trị hợp lệ: `ordered`, `delivered`, `canceled` |
+| `total_cost_vnd` | DECIMAL(18,0) | NULL |  |  |  |
 
 > **Ràng buộc bảng**: CHECK ( store_id IS NOT NULL OR warehouse_id IS NOT NULL )
 
@@ -486,12 +489,14 @@ Chi tiết dòng hàng trong 1 đơn đặt hàng — mỗi dòng chỉ dùng đ
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `purchase_order_item_id` | BIGINT | NOT NULL | PK |  |  |
-| `purchase_order_id` | BIGINT | NOT NULL | FK → `fact_purchase_order.purchase_order_id` |  |  |
+| `po_item_id` | VARCHAR(50) | NOT NULL | PK |  |  |
+| `po_id` | VARCHAR(50) | NOT NULL | FK → `fact_purchase_order.po_id` |  |  |
 | `ingredient_id` | INT | NULL | FK → `dim_ingredient.ingredient_id` |  |  |
 | `variant_id` | VARCHAR(20) | NULL | FK → `dim_product_variant.variant_id` |  |  |
-| `quantity` | DECIMAL(12,3) | NOT NULL |  |  |  |
+| `quantity_ordered` | DECIMAL(12,3) | NOT NULL |  |  |  |
+| `unit` | VARCHAR(20) | NULL |  |  |  |
 | `unit_cost_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
+| `total_cost_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 
 > **Ràng buộc bảng**: CHECK ( (ingredient_id IS NOT NULL AND variant_id IS NULL) OR (ingredient_id IS NULL AND variant_id IS NOT NULL) )
 
@@ -499,20 +504,23 @@ Chi tiết dòng hàng trong 1 đơn đặt hàng — mỗi dòng chỉ dùng đ
 
 ---
 
-### `fact_inventory_transaction`
+### `fact_inventory`
 
 Ledger tồn kho (sổ cái) — mọi biến động nhập/xuất/điều chỉnh/hao hụt. Grain kép: theo `ingredient_id` (đồ uống) hoặc `variant_id` (Food/Retail/Merch).
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `inventory_txn_id` | BIGINT | NOT NULL | PK |  |  |
+| `transaction_id` | VARCHAR(50) | NOT NULL | PK |  |  |
+| `date_key` | INT | NOT NULL | FK → `dim_date.date_key` |  |  |
 | `store_id` | INT | NOT NULL | FK → `dim_store.store_id` |  |  |
+| `warehouse_id` | INT | NULL | FK → `dim_warehouse.warehouse_id` |  |  |
 | `ingredient_id` | INT | NULL | FK → `dim_ingredient.ingredient_id` |  |  |
 | `variant_id` | VARCHAR(20) | NULL | FK → `dim_product_variant.variant_id` |  |  |
-| `txn_date` | DATE | NOT NULL |  |  |  |
-| `txn_type` | VARCHAR(20) | NOT NULL |  |  | giá trị hợp lệ: `stock_in`, `stock_out_sales`, `adjustment`, `wastage` |
-| `quantity` | DECIMAL(12,3) | NOT NULL |  |  | duong=nhap, am=xuat/hao hut |
+| `transaction_type` | VARCHAR(20) | NOT NULL |  |  | giá trị hợp lệ: `stock_in`, `stock_out_sales`, `adjustment`, `wastage` |
+| `quantity_delta` | DECIMAL(12,3) | NOT NULL |  |  | duong=nhap, am=xuat/hao hut |
+| `unit` | VARCHAR(20) | NULL |  |  |  |
 | `unit_cost_vnd` | DECIMAL(18,0) | NULL |  |  |  |
+| `total_cost_vnd` | DECIMAL(18,0) | NULL |  |  |  |
 
 > **Ràng buộc bảng**: CHECK ( (ingredient_id IS NOT NULL AND variant_id IS NULL) OR (ingredient_id IS NULL AND variant_id IS NOT NULL) )
 
@@ -575,11 +583,10 @@ Ca làm thực tế của từng nhân viên — check-in/check-out, số phút 
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `employee_shift_id` | BIGINT | NOT NULL | PK |  |  |
-| `employee_id` | INT | NOT NULL | FK → `dim_employee.employee_id` |  |  |
+| `employee_id` | INT | NOT NULL | PK, FK → `dim_employee.employee_id` |  |  |
 | `store_id` | INT | NOT NULL | FK → `dim_store.store_id` |  |  |
-| `shift_id` | INT | NOT NULL | FK → `dim_shift.shift_id` |  |  |
-| `work_date` | DATE | NOT NULL |  |  |  |
+| `shift_id` | INT | NOT NULL | PK, FK → `dim_shift.shift_id` |  |  |
+| `work_date` | DATE | NOT NULL | PK |  |  |
 | `actual_check_in` | DATETIME2 | NULL |  |  |  |
 | `actual_check_out` | DATETIME2 | NULL |  |  |  |
 | `late_minutes` | INT | NOT NULL |  | `0` |  |
@@ -596,9 +603,8 @@ Bảng lương theo tháng, tổng hợp từ ca làm thực tế.
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `payroll_id` | BIGINT | NOT NULL | PK |  |  |
-| `employee_id` | INT | NOT NULL | FK → `dim_employee.employee_id` |  |  |
-| `pay_month` | DATE | NOT NULL |  |  |  |
+| `employee_id` | INT | NOT NULL | PK, FK → `dim_employee.employee_id` |  |  |
+| `pay_month` | DATE | NOT NULL | PK |  |  |
 | `base_salary_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `bonus_allowance_vnd` | DECIMAL(18,0) | NOT NULL |  | `0` |  |
 | `total_paid_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
@@ -629,10 +635,9 @@ Chi phí phát sinh theo store/ngày thuộc các danh mục chi phí khác.
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `store_expense_id` | BIGINT | NOT NULL | PK |  |  |
-| `store_id` | INT | NOT NULL | FK → `dim_store.store_id` |  |  |
-| `expense_category_id` | INT | NOT NULL | FK → `dim_expense_category.expense_category_id` |  |  |
-| `expense_date` | DATE | NOT NULL |  |  |  |
+| `store_id` | INT | NOT NULL | PK, FK → `dim_store.store_id` |  |  |
+| `expense_category_id` | INT | NOT NULL | PK, FK → `dim_expense_category.expense_category_id` |  |  |
+| `expense_date` | DATE | NOT NULL | PK |  |  |
 | `amount_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `note` | NVARCHAR(300) | NULL |  |  |  |
 
@@ -646,9 +651,8 @@ P&L tổng hợp theo store/tháng — bảng derive, tính từ order, payroll,
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `pnl_id` | BIGINT | NOT NULL | PK |  |  |
-| `store_id` | INT | NOT NULL | FK → `dim_store.store_id` |  |  |
-| `pnl_month` | DATE | NOT NULL |  |  | ngay dau thang (VD: 2025-06-01) |
+| `store_id` | INT | NOT NULL | PK, FK → `dim_store.store_id` |  |  |
+| `pnl_month` | DATE | NOT NULL | PK |  | ngay dau thang (VD: 2025-06-01) |
 | `revenue_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `cogs_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `labor_cost_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
@@ -692,9 +696,8 @@ KPI vận hành tổng hợp theo ngày/store — bảng derive phục vụ dash
 
 | Cột | Kiểu dữ liệu | Bắt buộc | Khóa / Tham chiếu | Mặc định | Ghi chú |
 |---|---|---|---|---|---|
-| `kpi_id` | BIGINT | NOT NULL | PK |  |  |
-| `store_id` | INT | NOT NULL | FK → `dim_store.store_id` |  |  |
-| `kpi_date` | DATE | NOT NULL |  |  |  |
+| `store_id` | INT | NOT NULL | PK, FK → `dim_store.store_id` |  |  |
+| `kpi_date` | DATE | NOT NULL | PK |  |  |
 | `date_key` | INT | NULL | FK → `dim_date.date_key` |  |  |
 | `revenue_vnd` | DECIMAL(18,0) | NOT NULL |  |  |  |
 | `order_count` | INT | NOT NULL |  |  |  |
