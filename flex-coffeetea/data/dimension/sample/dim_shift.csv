@@ -1,0 +1,6 @@
+﻿shift_id,shift_name,standard_start_time,standard_end_time,total_hours,pay_per_shift_vnd,bonus_vnd
+1,Ca sang,06:00,14:00,8.0,280000,0
+2,Ca chieu,14:00,22:00,8.0,300000,20000
+3,Ca gay 1(part-time),7:00,11:00,4.0,150000,0
+4,Ca gay 2(part-time),12:00,16:00,4.0,150000,0
+5,Ca gay 3(part-time),18:00,22:00,4.0,160000,0

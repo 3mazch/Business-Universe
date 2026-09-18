@@ -1,0 +1,43 @@
+﻿ingredient_id,ingredient_name,unit,source_type,avg_shelf_life_days
+1,Ca phe rang xay Robusta,kg,central,270
+2,Ca phe hat Arabica (xay espresso),kg,central,270
+3,Sua dac,lit,central,365
+4,Sua tuoi,lit,local,10
+5,Cot dua,lit,local,15
+6,Kem beo (creamer),kg,central,180
+7,Kem muoi,kg,local,20
+8,Tra lai (cot u san),lit,central,3
+9,Tra o long (cot u san),lit,central,3
+10,Syrup vai,lit,central,180
+11,Syrup nhan,lit,central,180
+12,Syrup mang cau,lit,central,180
+13,Syrup dao,lit,central,180
+14,Syrup dau,lit,central,180
+15,Syrup xoai,lit,central,180
+16,Syrup chanh,lit,central,180
+17,Syrup hoa dao (LTO),lit,central,180
+18,Syrup oi hong dao (LTO),lit,central,180
+19,Bot matcha,kg,central,270
+20,Bot cacao / Sot chocolate,kg,central,270
+21,Puree xoai,kg,local,20
+22,Kem pho mai,kg,local,20
+23,Syrup duong,lit,central,365
+24,Da vien,kg,local,1
+25,Tran chau den,kg,local,3
+26,Tran chau trang,kg,local,3
+27,Thach trai cay/dua/ca phe,kg,local,5
+28,Pudding trung,kg,local,5
+29,Tran chau duong den (LTO),kg,local,3
+30,Dua non tuoi (LTO),kg,local,3
+31,Nuoc cot chanh,lit,local,5
+32,Cold brew nen (LTO),lit,central,5
+33,Syrup hanh nhan (LTO),lit,central,180
+34,Syrup cam sa (LTO),lit,central,180
+35,Com xanh (LTO),kg,local,5
+36,Syrup que tao do (LTO),lit,central,180
+37,Syrup buoi mat ong (LTO),lit,central,180
+38,Syrup dua hau (LTO),lit,central,180
+39,Syrup cam que (LTO),lit,central,180
+40,Syrup mam xoi (LTO),lit,central,180
+41,Syrup dua (LTO),lit,central,180
+42,Syrup sau (LTO),lit,central,180

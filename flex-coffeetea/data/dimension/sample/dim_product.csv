@@ -1,0 +1,64 @@
+﻿product_id,category_id,product_name,description,launch_date,discontinued_date,status
+BVR-001,CAT-01,Ca phe Den,,2021-01-01,,active
+BVR-002,CAT-01,Ca phe Sua,,2021-01-01,,active
+BVR-003,CAT-01,Bac Xiu,,2021-01-01,,active
+BVR-004,CAT-01,Ca phe Muoi,,2021-01-01,,active
+BVR-005,CAT-01,Ca phe Dua,,2021-01-01,,active
+BVR-006,CAT-01,Espresso,,2021-01-01,,active
+BVR-007,CAT-01,Latte,,2021-01-01,,active
+BVR-008,CAT-01,Cappuccino,,2021-01-01,,active
+BVR-009,CAT-01,Mocha,,2021-01-01,,active
+BVR-010,CAT-02,Tra Lai Vai,,2021-01-01,,active
+BVR-011,CAT-02,Tra Lai Nhan,,2021-01-01,,active
+BVR-012,CAT-02,Tra Lai Mang Cau,,2021-01-01,,active
+BVR-013,CAT-02,Tra Sua Tra Lai,,2021-01-01,,active
+BVR-014,CAT-02,Tra Kem Pho Mai Tra Lai,,2021-01-01,,active
+BVR-015,CAT-02,Tra O Long Dao,,2021-01-01,,active
+BVR-016,CAT-02,Tra O Long Dau,,2021-01-01,,active
+BVR-017,CAT-02,Tra O Long Xoai,,2021-01-01,,active
+BVR-018,CAT-02,Tra Sua O Long,,2021-01-01,,active
+BVR-019,CAT-02,Tra Kem Pho Mai O Long,,2021-01-01,,active
+BVR-020,CAT-02,Matcha Latte,,2021-01-01,,active
+BVR-021,CAT-02,Chocolate Latte,,2021-01-01,,active
+BVR-022,CAT-03,Da Xay Ca Phe,,2021-01-01,,active
+BVR-023,CAT-03,Da Xay Chocolate,,2021-01-01,,active
+BVR-024,CAT-03,Da Xay Matcha,,2021-01-01,,active
+BVR-025,CAT-03,Da Xay Xoai,,2021-01-01,,active
+BVR-026,CAT-03,Da Xay Chanh,,2021-01-01,,active
+BVR-027,CAT-04,Tra Sua Tran Chau Duong Den Nuong,,2023-07-01,2023-09-30,active
+BVR-028,CAT-04,Chocolate Latte Hanh Nhan,,2023-10-01,2023-12-31,active
+BVR-029,CAT-04,Latte Hoa Dao,,2024-01-01,2024-03-31,active
+BVR-030,CAT-04,Cold Brew Cam Sa,,2024-04-01,2024-06-30,active
+BVR-031,CAT-04,Ca Phe Cot Dua Com Xanh,,2024-07-01,2024-09-30,active
+BVR-032,CAT-04,Tra Que Tao Do,,2024-10-01,2024-12-31,active
+BVR-033,CAT-04,Tra O Long Buoi Mat Ong,,2025-01-01,2025-03-31,active
+BVR-034,CAT-04,Tra Xanh Dua Hau,,2025-04-01,2025-06-30,active
+BVR-035,CAT-04,Ca phe Muoi Tran Chau,,2025-07-01,2025-09-30,active
+BVR-036,CAT-04,Latte Cam Que,,2025-10-01,2025-12-31,active
+BVR-037,CAT-04,Tra Lai Mam Xoi,,2026-01-01,2026-03-31,active
+BVR-038,CAT-04,Tra Dua Tran Chau,,2026-04-01,2026-06-30,active
+BVR-039,CAT-04,Cold Brew Sau Mua Thu,,2026-07-01,2026-09-30,active
+FOOD-001,CAT-05,Banh lanh Matcha,,2021-01-01,,active
+FOOD-002,CAT-05,Banh lanh Socola,,2021-01-01,,active
+FOOD-003,CAT-05,Banh lanh Red Velvet,,2021-01-01,,active
+FOOD-004,CAT-05,Banh Mousse Chanh Day,,2021-01-01,,active
+FOOD-005,CAT-05,Sua Chua Hu,,2021-01-01,,active
+FOOD-006,CAT-05,Banh Mi Que,,2021-01-01,,active
+FOOD-007,CAT-05,Banh Mi Thap Cam,,2021-01-01,,active
+FOOD-008,CAT-05,Sandwich,,2021-01-01,,active
+FOOD-009,CAT-05,Croissant Bo,,2021-01-01,,active
+FOOD-010,CAT-05,Croissant Chocolate,,2021-01-01,,active
+FOOD-011,CAT-05,Croissant Trung Muoi,,2021-01-01,,active
+RTL-001,CAT-06,Ca Phe Hat Arabica,,2021-01-01,,active
+RTL-002,CAT-06,Ca Phe Hat Robusta,,2021-01-01,,active
+RTL-003,CAT-06,Ca Phe Xay Arabica,,2021-01-01,,active
+RTL-004,CAT-06,Ca Phe Xay Robusta,,2021-01-01,,active
+RTL-005,CAT-06,Tra Lai Dong Goi,,2021-01-01,,active
+RTL-006,CAT-06,Tra O Long Dong Goi,,2021-01-01,,active
+MER-001,CAT-07,Ly Nhua 1 Lop,,2021-01-01,,active
+MER-002,CAT-07,Ly Nhua 2 Lop,,2021-01-01,,active
+MER-003,CAT-07,Ly Giu Nhiet,,2021-01-01,,active
+MER-004,CAT-07,Binh Giu Nhiet,,2021-01-01,,active
+MER-005,CAT-07,Tui Tote,,2021-01-01,,active
+MER-006,CAT-07,Pin Cai Ao,,2021-01-01,,active
+MER-007,CAT-07,Moc Khoa,,2021-01-01,,active

@@ -1,0 +1,13 @@
+﻿reward_id,reward_name,points_required,reward_type
+1,Voucher giam 20k cho don tiep theo,100,voucher
+2,Voucher giam 50k cho don tiep theo,250,voucher
+3,Voucher giam 100k cho don tiep theo,500,voucher
+4,1 ly Ca phe Den size M mien phi,300,free_product
+5,1 ly Tra size M mien phi,300,free_product
+6,1 ly do uong bat ky size M mien phi,400,free_product
+7,1 ly do uong bat ky size L mien phi,600,free_product
+8,Ly su Flex Coffee 350ml,800,physical_gift
+9,Ly giu nhiet Flex Coffee 500ml,1200,physical_gift
+10,Tui vai Flex Coffee & Tea,600,physical_gift
+11,Ca phe rang xay 200g (Retail),1000,physical_gift
+12,Set qua Flex (ly + ca phe + tra),2000,physical_gift

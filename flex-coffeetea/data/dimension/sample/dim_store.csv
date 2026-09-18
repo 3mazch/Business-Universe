@@ -1,0 +1,26 @@
+﻿store_id,store_code,store_name,city,warehouse_region,location_tier,size_m2,open_date,status,closed_date,temp_close_start,temp_close_end,is_outlier_small_prime,monthly_rent_vnd,monthly_revenue_baseline_vnd,revenue_per_m2_vnd,staff_count_baseline,channel_mix_dine_in,channel_mix_app,channel_mix_delivery,months_alive_at_window_end
+1,HN-01,Flex Coffee & Tea - Ha Noi 01,Ha Noi,Kho Mien Bac,standard,105,2022-03-29,active,,nan,"(None, None)",False,87300000,1276000000,12151303,10,0.494,0.205,0.301,52
+2,HN-02,Flex Coffee & Tea - Ha Noi 02,Ha Noi,Kho Mien Bac,prime,75,2021-06-04,active,,nan,"(None, None)",True,167300000,1746000000,23281663,8,0.475,0.288,0.237,61
+3,HN-03,Flex Coffee & Tea - Ha Noi 03,Ha Noi,Kho Mien Bac,standard,113,2023-04-05,active,,nan,"(None, None)",False,83400000,1352000000,11968132,11,0.508,0.193,0.299,39
+4,HN-04,Flex Coffee & Tea - Ha Noi 04,Ha Noi,Kho Mien Bac,prime,74,2023-01-21,active,,nan,"(None, None)",True,159500000,1801000000,24332028,8,0.489,0.278,0.233,42
+5,HN-05,Flex Coffee & Tea - Ha Noi 05,Ha Noi,Kho Mien Bac,secondary,176,2022-12-20,active,,nan,"(None, None)",False,93100000,1489000000,8460481,18,0.46,0.157,0.384,43
+6,HN-06,Flex Coffee & Tea - Ha Noi 06,Ha Noi,Kho Mien Bac,standard,81,2020-07-23,active,,nan,"(None, None)",False,62500000,853000000,10530124,8,0.46,0.213,0.326,72
+7,HN-07,Flex Coffee & Tea - Ha Noi 07,Ha Noi,Kho Mien Bac,secondary,114,2021-12-12,active,,nan,"(None, None)",False,57600000,1013000000,8883760,10,0.45,0.167,0.383,55
+8,HN-08,Flex Coffee & Tea - Ha Noi 08,Ha Noi,Kho Mien Bac,prime,99,2020-12-01,active,,nan,"(None, None)",False,127000000,1628000000,16439949,10,0.571,0.225,0.204,67
+9,HN-09,Flex Coffee & Tea - Ha Noi 09,Ha Noi,Kho Mien Bac,standard,103,2024-02-02,active,,nan,"(None, None)",False,77000000,1146000000,11124122,10,0.473,0.227,0.3,29
+10,HN-10,Flex Coffee & Tea - Ha Noi 10,Ha Noi,Kho Mien Bac,prime,113,2021-06-23,active,,nan,"(None, None)",False,185200000,1985000000,17562997,13,0.556,0.224,0.22,61
+11,HCM-01,Flex Coffee & Tea - Ho Chi Minh 01,Ho Chi Minh,Kho Mien Nam,standard,90,2023-03-06,active,,nan,"(None, None)",False,68200000,1046000000,11622309,8,0.539,0.218,0.243,40
+12,HCM-02,Flex Coffee & Tea - Ho Chi Minh 02,Ho Chi Minh,Kho Mien Nam,secondary,180,2021-12-07,closed,2025-09-16,nan,"(None, None)",False,82100000,1411000000,7840084,18,0.475,0.155,0.37,55
+13,HCM-03,Flex Coffee & Tea - Ho Chi Minh 03,Ho Chi Minh,Kho Mien Nam,standard,155,2021-09-16,active,,nan,"(None, None)",False,142200000,2004000000,12928974,18,0.538,0.202,0.26,58
+14,HCM-04,Flex Coffee & Tea - Ho Chi Minh 04,Ho Chi Minh,Kho Mien Nam,standard,159,2023-11-08,active,,nan,"(None, None)",False,121100000,1984000000,12478253,18,0.536,0.18,0.284,32
+15,HCM-05,Flex Coffee & Tea - Ho Chi Minh 05,Ho Chi Minh,Kho Mien Nam,secondary,133,2020-07-07,active,,nan,"(None, None)",False,66400000,1140000000,8573870,12,0.424,0.178,0.398,72
+16,HCM-06,Flex Coffee & Tea - Ho Chi Minh 06,Ho Chi Minh,Kho Mien Nam,standard,163,2023-06-01,active,,nan,"(None, None)",False,150600000,2048000000,12565116,19,0.517,0.194,0.289,37
+17,HCM-07,Flex Coffee & Tea - Ho Chi Minh 07,Ho Chi Minh,Kho Mien Nam,secondary,131,2023-01-04,active,,nan,"(None, None)",False,68200000,1062000000,8106030,12,0.453,0.154,0.393,42
+18,HCM-08,Flex Coffee & Tea - Ho Chi Minh 08,Ho Chi Minh,Kho Mien Nam,standard,118,2021-01-23,active,,nan,"(None, None)",False,93600000,1270000000,10760063,11,0.462,0.203,0.335,66
+19,HCM-09,Flex Coffee & Tea - Ho Chi Minh 09,Ho Chi Minh,Kho Mien Nam,standard,151,2021-10-17,active,,nan,"(None, None)",False,133000000,1600000000,10596139,16,0.517,0.174,0.31,57
+20,HCM-10,Flex Coffee & Tea - Ho Chi Minh 10,Ho Chi Minh,Kho Mien Nam,prime,126,2022-05-19,active,,nan,"(None, None)",False,166400000,1870000000,14839653,14,0.54,0.226,0.234,50
+21,DN-01,Flex Coffee & Tea - Da Nang 01,Da Nang,Kho Mien Nam,prime,127,2023-10-25,active,,nan,"(None, None)",False,127500000,1539000000,12117433,13,0.552,0.236,0.211,33
+22,DN-02,Flex Coffee & Tea - Da Nang 02,Da Nang,Kho Mien Nam,standard,97,2020-11-09,active,,nan,"(None, None)",False,65700000,863000000,8899861,8,0.479,0.198,0.322,68
+23,DN-03,Flex Coffee & Tea - Da Nang 03,Da Nang,Kho Mien Nam,secondary,217,2022-05-02,active,,nan,"(None, None)",False,74000000,1191000000,5488040,20,0.459,0.165,0.376,50
+24,DN-04,Flex Coffee & Tea - Da Nang 04,Da Nang,Kho Mien Nam,prime,113,2023-03-22,active,,nan,"(None, None)",False,118300000,1494000000,13221821,12,0.523,0.233,0.244,40
+25,DN-05,Flex Coffee & Tea - Da Nang 05,Da Nang,Kho Mien Nam,secondary,157,2021-08-13,temporarily_closed_recent,,2026-04-26,2026-07-02,False,57500000,854000000,5438846,13,0.432,0.187,0.381,59

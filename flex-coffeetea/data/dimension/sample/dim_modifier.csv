@@ -1,0 +1,12 @@
+﻿modifier_id,modifier_group,modifier_name,extra_price_vnd
+1,topping,Tran chau den,8000
+2,topping,Tran chau trang,8000
+3,topping,Thach (dua/ca phe/trai cay),8000
+4,topping,Pudding trung,10000
+5,topping,Kem cheese phu,12000
+6,sweetness,50% duong,0
+7,sweetness,100% duong,0
+8,sweetness,150% duong,0
+9,ice,50% da,0
+10,ice,100% da,0
+11,ice,150% da,0

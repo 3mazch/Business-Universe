@@ -1,0 +1,4 @@
+﻿tier_id,tier_name,min_spend_rolling_12m_vnd,tier_rank
+TIER-1,Member,0,1
+TIER-2,Gold,3000000,2
+TIER-3,VIP,10000000,3

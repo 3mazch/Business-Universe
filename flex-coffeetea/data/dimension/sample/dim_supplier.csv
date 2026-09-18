@@ -1,0 +1,17 @@
+﻿supplier_id,supplier_name,supplies_ingredient_type,service_region,category_served
+1,Cong ty Ca phe Trung Nguyen Wholesale,central,Toan quoc,Ca phe
+2,"Tra Tan Cuong Co., Ltd.",central,Toan quoc,Tra
+3,Vinamilk Industrial Supply,central,Toan quoc,"Sua dac, Kem beo"
+4,Thai Duong Syrup & Ingredients,central,Toan quoc,"Syrup, Nguyen lieu kho"
+5,Vinamilk Fresh Milk - Ha Noi,local,Ha Noi,Sua tuoi
+6,Vinamilk Fresh Milk - HCM,local,Ho Chi Minh,Sua tuoi
+7,Cung cap Trai Cay Sach - Ha Noi,local,Ha Noi,"Trai cay, Puree"
+8,Cung cap Trai Cay Sach - HCM,local,Ho Chi Minh,"Trai cay, Puree"
+9,Cung cap Trai Cay Sach - Da Nang,local,Da Nang,"Trai cay, Puree"
+10,Nuoc Da Sach Gia Lai - Ha Noi,local,Ha Noi,Da vien
+11,Nuoc Da Sach - HCM,local,Ho Chi Minh,Da vien
+12,Tran Chau & Topping An Phat,local,Toan quoc,"Tran chau, Thach, Pudding"
+13,Lavie Bakery Supply,outsource,Toan quoc,Food - Banh lanh
+14,Sun Bakehouse Wholesale,outsource,Toan quoc,Food - Banh nong
+15,Viet Coffee Bean Trading Co.,outsource,Toan quoc,Retail
+16,Flex Merch Production Partner,outsource,Toan quoc,Merchandise

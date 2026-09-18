@@ -1,0 +1,101 @@
+﻿recipe_id,variant_id,ingredient_id,ingredient_name,quantity_per_unit
+1,BVR-001-M,1,Ca phe rang xay Robusta,20.0
+2,BVR-001-L,1,Ca phe rang xay Robusta,26.0
+3,BVR-001-M,23,Syrup duong,10.0
+4,BVR-001-L,23,Syrup duong,13.0
+5,BVR-001-M,24,Da vien,120.0
+6,BVR-001-L,24,Da vien,156.0
+7,BVR-002-M,1,Ca phe rang xay Robusta,20.0
+8,BVR-002-L,1,Ca phe rang xay Robusta,26.0
+9,BVR-002-M,3,Sua dac,20.0
+10,BVR-002-L,3,Sua dac,26.0
+11,BVR-002-M,23,Syrup duong,8.0
+12,BVR-002-L,23,Syrup duong,10.4
+13,BVR-002-M,24,Da vien,120.0
+14,BVR-002-L,24,Da vien,156.0
+15,BVR-003-M,1,Ca phe rang xay Robusta,20.0
+16,BVR-003-L,1,Ca phe rang xay Robusta,26.0
+17,BVR-003-M,3,Sua dac,40.0
+18,BVR-003-L,3,Sua dac,52.0
+19,BVR-003-M,23,Syrup duong,5.0
+20,BVR-003-L,23,Syrup duong,6.5
+21,BVR-003-M,24,Da vien,130.0
+22,BVR-003-L,24,Da vien,169.0
+23,BVR-004-M,1,Ca phe rang xay Robusta,20.0
+24,BVR-004-L,1,Ca phe rang xay Robusta,26.0
+25,BVR-004-M,3,Sua dac,20.0
+26,BVR-004-L,3,Sua dac,26.0
+27,BVR-004-M,7,Kem muoi,30.0
+28,BVR-004-L,7,Kem muoi,39.0
+29,BVR-004-M,23,Syrup duong,8.0
+30,BVR-004-L,23,Syrup duong,10.4
+31,BVR-004-M,24,Da vien,120.0
+32,BVR-004-L,24,Da vien,156.0
+33,BVR-005-M,1,Ca phe rang xay Robusta,20.0
+34,BVR-005-L,1,Ca phe rang xay Robusta,26.0
+35,BVR-005-M,3,Sua dac,15.0
+36,BVR-005-L,3,Sua dac,19.5
+37,BVR-005-M,5,Cot dua,40.0
+38,BVR-005-L,5,Cot dua,52.0
+39,BVR-005-M,23,Syrup duong,8.0
+40,BVR-005-L,23,Syrup duong,10.4
+41,BVR-005-M,24,Da vien,120.0
+42,BVR-005-L,24,Da vien,156.0
+43,BVR-006-M,2,Ca phe hat Arabica (xay espresso),18.0
+44,BVR-006-L,2,Ca phe hat Arabica (xay espresso),23.4
+45,BVR-006-M,23,Syrup duong,5.0
+46,BVR-006-L,23,Syrup duong,6.5
+47,BVR-006-M,24,Da vien,80.0
+48,BVR-006-L,24,Da vien,104.0
+49,BVR-007-M,2,Ca phe hat Arabica (xay espresso),18.0
+50,BVR-007-L,2,Ca phe hat Arabica (xay espresso),23.4
+51,BVR-007-M,4,Sua tuoi,150.0
+52,BVR-007-L,4,Sua tuoi,195.0
+53,BVR-007-M,23,Syrup duong,8.0
+54,BVR-007-L,23,Syrup duong,10.4
+55,BVR-007-M,24,Da vien,100.0
+56,BVR-007-L,24,Da vien,130.0
+57,BVR-008-M,2,Ca phe hat Arabica (xay espresso),18.0
+58,BVR-008-L,2,Ca phe hat Arabica (xay espresso),23.4
+59,BVR-008-M,4,Sua tuoi,130.0
+60,BVR-008-L,4,Sua tuoi,169.0
+61,BVR-008-M,23,Syrup duong,8.0
+62,BVR-008-L,23,Syrup duong,10.4
+63,BVR-008-M,24,Da vien,90.0
+64,BVR-008-L,24,Da vien,117.0
+65,BVR-009-M,2,Ca phe hat Arabica (xay espresso),18.0
+66,BVR-009-L,2,Ca phe hat Arabica (xay espresso),23.4
+67,BVR-009-M,4,Sua tuoi,140.0
+68,BVR-009-L,4,Sua tuoi,182.0
+69,BVR-009-M,20,Bot cacao / Sot chocolate,25.0
+70,BVR-009-L,20,Bot cacao / Sot chocolate,32.5
+71,BVR-009-M,23,Syrup duong,6.0
+72,BVR-009-L,23,Syrup duong,7.8
+73,BVR-009-M,24,Da vien,100.0
+74,BVR-009-L,24,Da vien,130.0
+75,BVR-010-M,8,Tra lai (cot u san),150.0
+76,BVR-010-L,8,Tra lai (cot u san),195.0
+77,BVR-010-M,23,Syrup duong,15.0
+78,BVR-010-L,23,Syrup duong,19.5
+79,BVR-010-M,24,Da vien,130.0
+80,BVR-010-L,24,Da vien,169.0
+81,BVR-010-M,10,Syrup vai,30.0
+82,BVR-010-L,10,Syrup vai,39.0
+83,BVR-011-M,8,Tra lai (cot u san),150.0
+84,BVR-011-L,8,Tra lai (cot u san),195.0
+85,BVR-011-M,23,Syrup duong,15.0
+86,BVR-011-L,23,Syrup duong,19.5
+87,BVR-011-M,24,Da vien,130.0
+88,BVR-011-L,24,Da vien,169.0
+89,BVR-011-M,11,Syrup nhan,30.0
+90,BVR-011-L,11,Syrup nhan,39.0
+91,BVR-012-M,8,Tra lai (cot u san),150.0
+92,BVR-012-L,8,Tra lai (cot u san),195.0
+93,BVR-012-M,23,Syrup duong,15.0
+94,BVR-012-L,23,Syrup duong,19.5
+95,BVR-012-M,24,Da vien,130.0
+96,BVR-012-L,24,Da vien,169.0
+97,BVR-012-M,12,Syrup mang cau,30.0
+98,BVR-012-L,12,Syrup mang cau,39.0
+99,BVR-013-M,8,Tra lai (cot u san),120.0
+100,BVR-013-L,8,Tra lai (cot u san),156.0

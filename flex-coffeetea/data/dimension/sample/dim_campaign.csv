@@ -1,0 +1,101 @@
+﻿campaign_id,campaign_name,campaign_type,start_date,end_date,scope_type,scope_store_id,scope_channel_id,linked_product_id,linked_product_name,discount_value,funding_source,budget_vnd,expected_uplift_pct,priority
+1,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 05,percent_discount,2020-07-07,2020-07-20,store,15.0,,,,30.0,flex_funded,31385106,84.0,95
+2,Grand Opening - Flex Coffee & Tea - Ha Noi 06,percent_discount,2020-07-23,2020-08-05,store,6.0,,,,30.0,flex_funded,27188594,76.2,95
+3,Grand Opening - Flex Coffee & Tea - Da Nang 02,percent_discount,2020-11-09,2020-11-22,store,22.0,,,,30.0,flex_funded,38139121,85.1,95
+4,Grand Opening - Flex Coffee & Tea - Ha Noi 08,percent_discount,2020-12-01,2020-12-14,store,8.0,,,,30.0,flex_funded,28153634,83.5,95
+5,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 08,percent_discount,2021-01-23,2021-02-05,store,18.0,,,,30.0,flex_funded,24703737,72.7,95
+6,Grand Opening - Flex Coffee & Tea - Ha Noi 02,percent_discount,2021-06-04,2021-06-17,store,2.0,,,,30.0,flex_funded,21975475,66.9,95
+7,Grand Opening - Flex Coffee & Tea - Ha Noi 10,percent_discount,2021-06-23,2021-07-06,store,10.0,,,,30.0,flex_funded,23252458,79.8,95
+8,Grand Opening - Flex Coffee & Tea - Da Nang 05,percent_discount,2021-08-13,2021-08-26,store,25.0,,,,30.0,flex_funded,36295412,74.4,95
+9,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 03,percent_discount,2021-09-16,2021-09-29,store,13.0,,,,30.0,flex_funded,21817683,80.2,95
+10,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 09,percent_discount,2021-10-17,2021-10-30,store,19.0,,,,30.0,flex_funded,29346424,73.9,95
+11,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 02,percent_discount,2021-12-07,2021-12-20,store,12.0,,,,30.0,flex_funded,35670747,85.9,95
+12,Grand Opening - Flex Coffee & Tea - Ha Noi 07,percent_discount,2021-12-12,2021-12-25,store,7.0,,,,30.0,flex_funded,39161026,77.3,95
+13,Grand Opening - Flex Coffee & Tea - Ha Noi 01,percent_discount,2022-03-29,2022-04-11,store,1.0,,,,30.0,flex_funded,27389269,60.2,95
+14,Grand Opening - Flex Coffee & Tea - Da Nang 03,percent_discount,2022-05-02,2022-05-15,store,23.0,,,,30.0,flex_funded,23129379,87.8,95
+15,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 10,percent_discount,2022-05-19,2022-06-01,store,20.0,,,,30.0,flex_funded,22529497,73.3,95
+16,Grand Opening - Flex Coffee & Tea - Ha Noi 05,percent_discount,2022-12-20,2023-01-02,store,5.0,,,,30.0,flex_funded,29344146,80.1,95
+17,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 07,percent_discount,2023-01-04,2023-01-17,store,17.0,,,,30.0,flex_funded,26382351,76.1,95
+18,Grand Opening - Flex Coffee & Tea - Ha Noi 04,percent_discount,2023-01-21,2023-02-03,store,4.0,,,,30.0,flex_funded,22377578,75.4,95
+19,BOGO Tuan Le 02/2023,bogo,2023-02-10,2023-02-16,system,,,,,,flex_funded,29685216,33.7,70
+20,Grab Voucher Doi Tac Q1/2023,percent_discount,2023-03-01,2023-03-14,channel,,3.0,,,30.0,shared,0,33.1,40
+21,Womens Day 2023,percent_discount,2023-03-06,2023-03-08,system,,,,,20.0,flex_funded,34449461,25.7,50
+22,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 01,percent_discount,2023-03-06,2023-03-19,store,11.0,,,,30.0,flex_funded,31888253,72.7,95
+23,Grand Opening - Flex Coffee & Tea - Da Nang 04,percent_discount,2023-03-22,2023-04-04,store,24.0,,,,30.0,flex_funded,27931579,65.0,95
+24,Grand Opening - Flex Coffee & Tea - Ha Noi 03,percent_discount,2023-04-05,2023-04-18,store,3.0,,,,30.0,flex_funded,21054043,85.8,95
+25,Reunification 2023,percent_discount,2023-04-28,2023-05-02,system,,,,,25.0,flex_funded,42588477,23.5,50
+26,ShopeeFood Voucher Doi Tac Q2/2023,percent_discount,2023-05-01,2023-05-14,channel,,2.0,,,30.0,shared,0,26.3,40
+27,BOGO Tuan Le 05/2023,bogo,2023-05-10,2023-05-16,system,,,,,,flex_funded,43836388,38.1,70
+28,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 06,percent_discount,2023-06-01,2023-06-14,store,16.0,,,,30.0,flex_funded,23666460,67.5,95
+29,Childrens Day 2023,percent_discount,2023-06-01,2023-06-01,system,,,,,20.0,flex_funded,45496489,18.8,50
+30,Summer Vibes 2023,percent_discount,2023-06-15,2023-07-15,system,,,,,15.0,flex_funded,43082477,17.1,50
+31,BeFood Voucher Doi Tac Q3/2023,percent_discount,2023-07-01,2023-07-14,channel,,5.0,,,30.0,shared,0,23.2,40
+32,LTO - Tra Sua Tran Chau Duong Den Nuong,seasonal,2023-07-01,2023-09-30,system,,,,Tra Sua Tran Chau Duong Den Nuong,,flex_funded,18735650,10.3,30
+33,BOGO Tuan Le 08/2023,bogo,2023-08-10,2023-08-16,system,,,,,,flex_funded,44615450,36.4,70
+34,Back to School 2023,percent_discount,2023-08-15,2023-09-05,system,,,,,15.0,flex_funded,22915909,17.9,50
+35,National Day 2023,percent_discount,2023-09-01,2023-09-03,system,,,,,20.0,flex_funded,55985658,19.0,50
+36,GreenSM Voucher Doi Tac Q3/2023,percent_discount,2023-09-01,2023-09-14,channel,,6.0,,,30.0,shared,0,28.1,40
+37,LTO - Chocolate Latte Hanh Nhan,seasonal,2023-10-01,2023-12-31,system,,,,Chocolate Latte Hanh Nhan,,flex_funded,24228452,12.9,30
+38,Grand Opening - Flex Coffee & Tea - Da Nang 01,percent_discount,2023-10-25,2023-11-07,store,21.0,,,,30.0,flex_funded,38465853,62.9,95
+39,Grand Opening - Flex Coffee & Tea - Ho Chi Minh 04,percent_discount,2023-11-08,2023-11-21,store,14.0,,,,30.0,flex_funded,23302355,61.8,95
+40,BOGO Tuan Le 11/2023,bogo,2023-11-10,2023-11-16,system,,,,,,flex_funded,44580115,36.0,70
+41,Christmas & NYE 2023,percent_discount,2023-12-20,2023-12-31,system,,,,,20.0,flex_funded,45403012,18.6,50
+42,LTO - Latte Hoa Dao,seasonal,2024-01-01,2024-03-31,system,,,,Latte Hoa Dao,,flex_funded,19682115,18.8,30
+43,Grand Opening - Flex Coffee & Tea - Ha Noi 09,percent_discount,2024-02-02,2024-02-15,store,9.0,,,,30.0,flex_funded,33658665,65.7,95
+44,Tet Nguyen Dan 2024,percent_discount,2024-02-09,2024-02-14,system,,,,,15.0,flex_funded,64483473,27.4,60
+45,BOGO Tuan Le 02/2024,bogo,2024-02-10,2024-02-16,system,,,,,,flex_funded,32359183,45.0,70
+46,Grab Voucher Doi Tac Q1/2024,percent_discount,2024-03-01,2024-03-14,channel,,3.0,,,30.0,shared,0,30.9,40
+47,Womens Day 2024,percent_discount,2024-03-06,2024-03-08,system,,,,,20.0,flex_funded,39674861,24.6,50
+48,LTO - Cold Brew Cam Sa,seasonal,2024-04-01,2024-06-30,system,,,,Cold Brew Cam Sa,,flex_funded,33299464,11.0,30
+49,Reunification 2024,percent_discount,2024-04-28,2024-05-02,system,,,,,25.0,flex_funded,44268915,28.3,50
+50,ShopeeFood Voucher Doi Tac Q2/2024,percent_discount,2024-05-01,2024-05-14,channel,,2.0,,,30.0,shared,0,23.0,40
+51,BOGO Tuan Le 05/2024,bogo,2024-05-10,2024-05-16,system,,,,,,flex_funded,29641643,37.6,70
+52,Childrens Day 2024,percent_discount,2024-06-01,2024-06-01,system,,,,,20.0,flex_funded,24667767,18.4,50
+53,Summer Vibes 2024,percent_discount,2024-06-15,2024-07-15,system,,,,,15.0,flex_funded,35293994,18.1,50
+54,BeFood Voucher Doi Tac Q3/2024,percent_discount,2024-07-01,2024-07-14,channel,,5.0,,,30.0,shared,0,24.7,40
+55,LTO - Ca Phe Cot Dua Com Xanh,seasonal,2024-07-01,2024-09-30,system,,,,Ca Phe Cot Dua Com Xanh,,flex_funded,29157347,10.4,30
+56,BOGO Tuan Le 08/2024,bogo,2024-08-10,2024-08-16,system,,,,,,flex_funded,28050413,41.3,70
+57,Back to School 2024,percent_discount,2024-08-15,2024-09-05,system,,,,,15.0,flex_funded,25354748,18.6,50
+58,National Day 2024,percent_discount,2024-09-01,2024-09-03,system,,,,,20.0,flex_funded,26778091,21.0,50
+59,GreenSM Voucher Doi Tac Q3/2024,percent_discount,2024-09-01,2024-09-14,channel,,6.0,,,30.0,shared,0,34.9,40
+60,LTO - Tra Que Tao Do,seasonal,2024-10-01,2024-12-31,system,,,,Tra Que Tao Do,,flex_funded,18143890,12.6,30
+61,BOGO Tuan Le 11/2024,bogo,2024-11-10,2024-11-16,system,,,,,,flex_funded,28679214,32.3,70
+62,Christmas & NYE 2024,percent_discount,2024-12-20,2024-12-31,system,,,,,20.0,flex_funded,50427850,23.1,50
+63,Flex App Mega Launch,percent_discount,2025-01-01,2025-01-31,channel,,4.0,,,35.0,flex_funded,150000000,80.0,90
+64,LTO - Tra O Long Buoi Mat Ong,seasonal,2025-01-01,2025-03-31,system,,,,Tra O Long Buoi Mat Ong,,flex_funded,31956909,17.2,30
+65,Double Day 1/1 - 2025,flash_sale,2025-01-01,2025-01-01,system,,,,,25.0,flex_funded,22894946,61.0,100
+66,Tet Nguyen Dan 2025,percent_discount,2025-01-28,2025-02-02,system,,,,,15.0,flex_funded,61762245,37.6,60
+67,Double Day 2/2 - 2025,flash_sale,2025-02-02,2025-02-02,system,,,,,25.0,flex_funded,11871534,52.3,100
+68,BOGO Tuan Le 02/2025,bogo,2025-02-10,2025-02-16,system,,,,,,flex_funded,30368105,41.9,70
+69,Grab Voucher Doi Tac Q1/2025,percent_discount,2025-03-01,2025-03-14,channel,,3.0,,,30.0,shared,0,29.7,40
+70,Double Day 3/3 - 2025,flash_sale,2025-03-03,2025-03-03,system,,,,,25.0,flex_funded,12653446,56.3,100
+71,Womens Day 2025,percent_discount,2025-03-06,2025-03-08,system,,,,,20.0,flex_funded,43841813,19.7,50
+72,LTO - Tra Xanh Dua Hau,seasonal,2025-04-01,2025-06-30,system,,,,Tra Xanh Dua Hau,,flex_funded,33832259,12.4,30
+73,Double Day 4/4 - 2025,flash_sale,2025-04-04,2025-04-04,system,,,,,25.0,flex_funded,22114694,66.9,100
+74,Reunification 2025,percent_discount,2025-04-28,2025-05-02,system,,,,,25.0,flex_funded,37916578,29.5,50
+75,ShopeeFood Voucher Doi Tac Q2/2025,percent_discount,2025-05-01,2025-05-14,channel,,2.0,,,30.0,shared,0,26.6,40
+76,Double Day 5/5 - 2025,flash_sale,2025-05-05,2025-05-05,system,,,,,25.0,flex_funded,14418934,69.3,100
+77,BOGO Tuan Le 05/2025,bogo,2025-05-10,2025-05-16,system,,,,,,flex_funded,39165337,38.9,70
+78,Childrens Day 2025,percent_discount,2025-06-01,2025-06-01,system,,,,,20.0,flex_funded,24791741,22.9,50
+79,Double Day 6/6 - 2025,flash_sale,2025-06-06,2025-06-06,system,,,,,25.0,flex_funded,22783604,49.5,100
+80,Summer Vibes 2025,percent_discount,2025-06-15,2025-07-15,system,,,,,15.0,flex_funded,31484920,16.7,50
+81,LTO - Ca phe Muoi Tran Chau,seasonal,2025-07-01,2025-09-30,system,,,,Ca phe Muoi Tran Chau,,flex_funded,33285201,15.0,30
+82,BeFood Voucher Doi Tac Q3/2025,percent_discount,2025-07-01,2025-07-14,channel,,5.0,,,30.0,shared,0,27.8,40
+83,Double Day 7/7 - 2025,flash_sale,2025-07-07,2025-07-07,system,,,,,25.0,flex_funded,11785277,66.8,100
+84,Double Day 8/8 - 2025,flash_sale,2025-08-08,2025-08-08,system,,,,,25.0,flex_funded,15007072,66.0,100
+85,BOGO Tuan Le 08/2025,bogo,2025-08-10,2025-08-16,system,,,,,,flex_funded,37910648,35.7,70
+86,Back to School 2025,percent_discount,2025-08-15,2025-09-05,system,,,,,15.0,flex_funded,36428983,14.5,50
+87,GreenSM Voucher Doi Tac Q3/2025,percent_discount,2025-09-01,2025-09-14,channel,,6.0,,,30.0,shared,0,21.8,40
+88,National Day 2025,percent_discount,2025-09-01,2025-09-03,system,,,,,20.0,flex_funded,45464823,20.2,50
+89,Double Day 9/9 - 2025,flash_sale,2025-09-09,2025-09-09,system,,,,,25.0,flex_funded,18517169,60.2,100
+90,LTO - Latte Cam Que,seasonal,2025-10-01,2025-12-31,system,,,,Latte Cam Que,,flex_funded,30072954,17.1,30
+91,Double Day 10/10 - 2025,flash_sale,2025-10-10,2025-10-10,system,,,,,25.0,flex_funded,12564217,54.3,100
+92,BOGO Tuan Le 11/2025,bogo,2025-11-10,2025-11-16,system,,,,,,flex_funded,40705148,37.9,70
+93,Double Day 11/11 - 2025,flash_sale,2025-11-11,2025-11-11,system,,,,,25.0,flex_funded,12710343,58.5,100
+94,Double Day 12/12 - 2025,flash_sale,2025-12-12,2025-12-12,system,,,,,25.0,flex_funded,23063184,68.1,100
+95,Christmas & NYE 2025,percent_discount,2025-12-20,2025-12-31,system,,,,,20.0,flex_funded,57376264,19.8,50
+96,LTO - Tra Lai Mam Xoi,seasonal,2026-01-01,2026-03-31,system,,,,Tra Lai Mam Xoi,,flex_funded,15218062,19.1,30
+97,Double Day 1/1 - 2026,flash_sale,2026-01-01,2026-01-01,system,,,,,25.0,flex_funded,10009594,60.0,100
+98,Double Day 2/2 - 2026,flash_sale,2026-02-02,2026-02-02,system,,,,,25.0,flex_funded,18197443,45.5,100
+99,BOGO Tuan Le 02/2026,bogo,2026-02-10,2026-02-16,system,,,,,,flex_funded,43563180,42.9,70
+100,Tet Nguyen Dan 2026,percent_discount,2026-02-16,2026-02-21,system,,,,,15.0,flex_funded,70793026,27.1,60
