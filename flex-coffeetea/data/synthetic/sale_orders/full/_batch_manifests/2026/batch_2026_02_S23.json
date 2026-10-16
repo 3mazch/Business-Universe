@@ -1,0 +1,28 @@
+{
+  "files": {
+    "fact_order": {
+      "rows": 12990,
+      "size_bytes": 1129985
+    },
+    "fact_order_discount": {
+      "rows": 6057,
+      "size_bytes": 219936
+    },
+    "fact_order_item": {
+      "rows": 24692,
+      "size_bytes": 1008818
+    },
+    "fact_order_item_modifier": {
+      "rows": 32182,
+      "size_bytes": 1316375
+    },
+    "fact_payment": {
+      "rows": 12990,
+      "size_bytes": 799831
+    }
+  },
+  "fingerprint": "25fa18cd32329bda7e1e6087fff0aa193f7889504494cda40d9bd20b31ecb394",
+  "month": 2,
+  "store_id": 23,
+  "year": 2026
+}
