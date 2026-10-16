@@ -8,9 +8,10 @@ Thư mục chứa sample đã lưu trong repository và các file được tạo
 | `dictionary/store_profiles_v1.json` | Hồ sơ mô phỏng của các cửa hàng |
 | `dimension/full/` | CSV dimension đầy đủ, được tạo khi chạy pipeline |
 | `dimension/temp/` | CSV trung gian trong quá trình sinh dimension |
-| `synthetic/sale_orders/` | Sale/Orders CSV phân vùng theo cửa hàng/tháng và manifest |
+| `synthetic/sale_orders/full/` | Sale/Orders CSV phân vùng theo cửa hàng/tháng và      batch_manifest thống kê |
+| `synthetic/sale_orders/sample/` | CSV cho 1 store mẫu|
 
-Các thư mục `full/`, `temp/` và `synthetic/` được tạo FULL khi chạy generator và không cần có sẵn trong repository. Từ thư mục `flex-coffeetea`, chạy dimension trước rồi mới chạy Sale/Orders:
+Các thư mục con bên trong `dimension/` và `synthetic/sale_orders` được tạo ra đầy đủ khi chạy generator và không có sẵn trong repository. Từ thư mục `flex-coffeetea`, chạy dimension trước rồi mới chạy Sale/Orders:
 
 ```powershell
 python src\data_generation\run_dimensions.py
